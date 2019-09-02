@@ -6,8 +6,8 @@ def load_library(file)
   emotes.each do |a, b|
     emote = b[0]
     mean = b[1]
-    hash[:get_emoticon][emote.to_sym] = a
-    hash[:get_meaning][mean.to_sym] = a
+    hash[:get_emoticon] = {emote => a}
+    hash[:get_meaning] = { mean => a}
   end
     return hash
 end
