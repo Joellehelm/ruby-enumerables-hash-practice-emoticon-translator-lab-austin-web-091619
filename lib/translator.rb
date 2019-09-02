@@ -4,8 +4,10 @@ def load_library(file)
   hash = {}
   emotes = YAML.load(File.open(File.join(File.dirname(__FILE__), 'emoticons.yml')))
   emotes.each do |a, b|
-    hash[:get_emoticon] = b[0]
-    hash[:get_meaning] = b[1]
+    emote = b[0]
+    mean = b[1]
+    hash[:get_emoticon][emote.to_sym] = a
+    hash[:get_meaning][mean.to_sym] = a
   end
     return hash
 end
