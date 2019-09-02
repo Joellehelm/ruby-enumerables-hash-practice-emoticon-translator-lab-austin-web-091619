@@ -29,7 +29,7 @@ def get_japanese_emoticon(file_path, emoticon)
 
   value = hash[:get_emoticon][emoticon]
   if value == nil
-    puts "Sorry, that emoticon was not found"
+    return "Sorry, that emoticon was not found"
   else
     return value
   end
