@@ -17,7 +17,7 @@ def load_library(file)
   work = emotes.invert
   work.each do |a, b|
     jpart[a[1]] = b
-    epart[a[0]] = b
+    epart[a[0]] = a[1]
   end
   epart = epart.uniq
   jpart = jpart.uniq
