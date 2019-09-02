@@ -1,11 +1,11 @@
 require "yaml"
 
 def load_library(file)
-  # jpart = {}
-  # epart = {}
-  # hash1 = {}
-  # hash2 = {}
-  # hash = {}
+  jpart = {}
+  epart = {}
+  hash1 = {}
+  hash2 = {}
+  hash = {}
   emotes = YAML.load(File.open(File.join(File.dirname(__FILE__), 'emoticons.yml')))
   work = emotes.invert
   work.each do |a, b|
