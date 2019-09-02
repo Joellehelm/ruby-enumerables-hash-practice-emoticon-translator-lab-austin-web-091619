@@ -1,6 +1,7 @@
 require "yaml"
 
 def load_library(file)
+  hash = {}
   emotes = YAML.load(File.open(File.join(File.dirname(__FILE__), 'emoticons.yml')))
   emotes.each do |a, b|
     hash[a] = b
