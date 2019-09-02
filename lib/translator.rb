@@ -1,9 +1,8 @@
 require "yaml"
 
 def load_library(file)
-
-
-  hash = {"get_emoticon" => YAML.load(File.open(File.join(File.dirname(__FILE__), 'emoticons.yml')))
+  emotes = YAML.load_file(emoticons.yaml)
+  emotes
 end
 
 def get_japanese_emoticon
