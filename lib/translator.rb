@@ -28,7 +28,7 @@ def load_library(file)
      hash2[a] = b
   end
   hash = {:get_emoticon => hash1, :get_meaning => hash2}
-  return hash
+  return hash.uniq
 end
 
 def get_japanese_emoticon
